@@ -50,7 +50,7 @@ void scanAllFilesInDirectory(const string &path) {
                 if (strcmp(entry.d_name, ".") &&
                     strcmp(entry.d_name, "..")) { // Пропускаємо папки "." та ".."
                     string nextFolder(filePath);
-                    scanAllFilesInDirectory(nextFolder); //рекурсивно заходимо в неї
+                    scanAllFilesInDirectory(nextFolder); //рекурсивно заходимо в папку
                 }
             } else if (S_ISREG(buf.st_mode)) {
                 //S_ISREG - Цей макрос повертає відмінний від нуля, якщо файл є звичайним.
